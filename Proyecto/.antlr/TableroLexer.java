@@ -1,4 +1,4 @@
-// Generated from c:/Users/olivi/tablero/tablero.g4 by ANTLR 4.13.1
+// Generated from c:/Users/USUARIO/53522/Proyecto/Tablero.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
-public class tableroLexer extends Lexer {
+public class TableroLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -21,8 +21,8 @@ public class tableroLexer extends Lexer {
 		JSON=16, SUMA=17, PROMEDIO=18, MAXIMO=19, MINIMO=20, CONTAR=21, BARRAS=22, 
 		LINEAS=23, TORTA=24, TABLA=25, CADENA=26, LBRACE=27, RBRACE=28, LPAREN=29, 
 		RPAREN=30, SEMICOLON=31, COLON=32, SLASH=33, EQ=34, COMMA=35, UNDERSCORE=36, 
-		GUION=37, DOT=38, DOUBLE_EQ=39, EXCLAM_EQ=40, MAYOR=41, MENOR=42, MAYOR_EQ=43, 
-		MENOR_EQ=44, LETRA=45, DIGITO=46, WS=47;
+		GUION=37, DOT=38, DOUBLE_EQ=39, EXCLAM_EQ=40, MAYOR_EQ=41, MENOR_EQ=42, 
+		MAYOR=43, MENOR=44, WS=45, IDENTIFICADOR=46, NUMERO=47;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -38,8 +38,8 @@ public class tableroLexer extends Lexer {
 			"SUMA", "PROMEDIO", "MAXIMO", "MINIMO", "CONTAR", "BARRAS", "LINEAS", 
 			"TORTA", "TABLA", "CADENA", "LBRACE", "RBRACE", "LPAREN", "RPAREN", "SEMICOLON", 
 			"COLON", "SLASH", "EQ", "COMMA", "UNDERSCORE", "GUION", "DOT", "DOUBLE_EQ", 
-			"EXCLAM_EQ", "MAYOR", "MENOR", "MAYOR_EQ", "MENOR_EQ", "LETRA", "DIGITO", 
-			"WS"
+			"EXCLAM_EQ", "MAYOR_EQ", "MENOR_EQ", "MAYOR", "MENOR", "WS", "IDENTIFICADOR", 
+			"NUMERO"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -51,7 +51,7 @@ public class tableroLexer extends Lexer {
 			"'falso'", "'csv'", "'api'", "'json'", "'suma'", "'promedio'", "'maximo'", 
 			"'minimo'", "'contar'", "'barras'", "'lineas'", "'torta'", "'tabla'", 
 			null, "'{'", "'}'", "'('", "')'", "';'", "':'", "'/'", "'='", "','", 
-			"'_'", "'-'", "'.'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='"
+			"'_'", "'-'", "'.'", "'=='", "'!='", "'>='", "'<='", "'>'", "'<'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -62,8 +62,8 @@ public class tableroLexer extends Lexer {
 			"JSON", "SUMA", "PROMEDIO", "MAXIMO", "MINIMO", "CONTAR", "BARRAS", "LINEAS", 
 			"TORTA", "TABLA", "CADENA", "LBRACE", "RBRACE", "LPAREN", "RPAREN", "SEMICOLON", 
 			"COLON", "SLASH", "EQ", "COMMA", "UNDERSCORE", "GUION", "DOT", "DOUBLE_EQ", 
-			"EXCLAM_EQ", "MAYOR", "MENOR", "MAYOR_EQ", "MENOR_EQ", "LETRA", "DIGITO", 
-			"WS"
+			"EXCLAM_EQ", "MAYOR_EQ", "MENOR_EQ", "MAYOR", "MENOR", "WS", "IDENTIFICADOR", 
+			"NUMERO"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -101,13 +101,13 @@ public class tableroLexer extends Lexer {
 	}
 
 
-	public tableroLexer(CharStream input) {
+	public TableroLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "tablero.g4"; }
+	public String getGrammarFileName() { return "Tablero.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -125,7 +125,7 @@ public class tableroLexer extends Lexer {
 	public ATN getATN() { return _ATN; }
 
 	public static final String _serializedATN =
-		"\u0004\u0000/\u013d\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002\u0001"+
+		"\u0004\u0000/\u014d\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002\u0001"+
 		"\u0007\u0001\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004"+
 		"\u0007\u0004\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007"+
 		"\u0007\u0007\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b"+
@@ -169,14 +169,16 @@ public class tableroLexer extends Lexer {
 		"\u001b\u0001\u001c\u0001\u001c\u0001\u001d\u0001\u001d\u0001\u001e\u0001"+
 		"\u001e\u0001\u001f\u0001\u001f\u0001 \u0001 \u0001!\u0001!\u0001\"\u0001"+
 		"\"\u0001#\u0001#\u0001$\u0001$\u0001%\u0001%\u0001&\u0001&\u0001&\u0001"+
-		"\'\u0001\'\u0001\'\u0001(\u0001(\u0001)\u0001)\u0001*\u0001*\u0001*\u0001"+
-		"+\u0001+\u0001+\u0001,\u0001,\u0001-\u0001-\u0001.\u0004.\u0138\b.\u000b"+
-		".\f.\u0139\u0001.\u0001.\u0001\u0105\u0000/\u0001\u0001\u0003\u0002\u0005"+
-		"\u0003\u0007\u0004\t\u0005\u000b\u0006\r\u0007\u000f\b\u0011\t\u0013\n"+
-		"\u0015\u000b\u0017\f\u0019\r\u001b\u000e\u001d\u000f\u001f\u0010!\u0011"+
-		"#\u0012%\u0013\'\u0014)\u0015+\u0016-\u0017/\u00181\u00193\u001a5\u001b"+
-		"7\u001c9\u001d;\u001e=\u001f? A!C\"E#G$I%K&M\'O(Q)S*U+W,Y-[.]/\u0001\u0000"+
-		"\u0003\u0002\u0000AZaz\u0001\u000009\u0003\u0000\t\n\r\r  \u013e\u0000"+
+		"\'\u0001\'\u0001\'\u0001(\u0001(\u0001(\u0001)\u0001)\u0001)\u0001*\u0001"+
+		"*\u0001+\u0001+\u0001,\u0004,\u0134\b,\u000b,\f,\u0135\u0001,\u0001,\u0001"+
+		"-\u0001-\u0005-\u013c\b-\n-\f-\u013f\t-\u0001.\u0004.\u0142\b.\u000b."+
+		"\f.\u0143\u0001.\u0001.\u0004.\u0148\b.\u000b.\f.\u0149\u0003.\u014c\b"+
+		".\u0001\u0105\u0000/\u0001\u0001\u0003\u0002\u0005\u0003\u0007\u0004\t"+
+		"\u0005\u000b\u0006\r\u0007\u000f\b\u0011\t\u0013\n\u0015\u000b\u0017\f"+
+		"\u0019\r\u001b\u000e\u001d\u000f\u001f\u0010!\u0011#\u0012%\u0013\'\u0014"+
+		")\u0015+\u0016-\u0017/\u00181\u00193\u001a5\u001b7\u001c9\u001d;\u001e"+
+		"=\u001f? A!C\"E#G$I%K&M\'O(Q)S*U+W,Y-[.]/\u0001\u0000\u0004\u0003\u0000"+
+		"\t\n\r\r  \u0002\u0000AZaz\u0004\u000009AZ__az\u0001\u000009\u0152\u0000"+
 		"\u0001\u0001\u0000\u0000\u0000\u0000\u0003\u0001\u0000\u0000\u0000\u0000"+
 		"\u0005\u0001\u0000\u0000\u0000\u0000\u0007\u0001\u0000\u0000\u0000\u0000"+
 		"\t\u0001\u0000\u0000\u0000\u0000\u000b\u0001\u0000\u0000\u0000\u0000\r"+
@@ -216,9 +218,9 @@ public class tableroLexer extends Lexer {
 		"\u0118\u0001\u0000\u0000\u0000E\u011a\u0001\u0000\u0000\u0000G\u011c\u0001"+
 		"\u0000\u0000\u0000I\u011e\u0001\u0000\u0000\u0000K\u0120\u0001\u0000\u0000"+
 		"\u0000M\u0122\u0001\u0000\u0000\u0000O\u0125\u0001\u0000\u0000\u0000Q"+
-		"\u0128\u0001\u0000\u0000\u0000S\u012a\u0001\u0000\u0000\u0000U\u012c\u0001"+
-		"\u0000\u0000\u0000W\u012f\u0001\u0000\u0000\u0000Y\u0132\u0001\u0000\u0000"+
-		"\u0000[\u0134\u0001\u0000\u0000\u0000]\u0137\u0001\u0000\u0000\u0000_"+
+		"\u0128\u0001\u0000\u0000\u0000S\u012b\u0001\u0000\u0000\u0000U\u012e\u0001"+
+		"\u0000\u0000\u0000W\u0130\u0001\u0000\u0000\u0000Y\u0133\u0001\u0000\u0000"+
+		"\u0000[\u0139\u0001\u0000\u0000\u0000]\u0141\u0001\u0000\u0000\u0000_"+
 		"`\u0005t\u0000\u0000`a\u0005a\u0000\u0000ab\u0005b\u0000\u0000bc\u0005"+
 		"l\u0000\u0000cd\u0005e\u0000\u0000de\u0005r\u0000\u0000ef\u0005o\u0000"+
 		"\u0000f\u0002\u0001\u0000\u0000\u0000gh\u0005f\u0000\u0000hi\u0005u\u0000"+
@@ -303,17 +305,27 @@ public class tableroLexer extends Lexer {
 		"L\u0001\u0000\u0000\u0000\u0122\u0123\u0005=\u0000\u0000\u0123\u0124\u0005"+
 		"=\u0000\u0000\u0124N\u0001\u0000\u0000\u0000\u0125\u0126\u0005!\u0000"+
 		"\u0000\u0126\u0127\u0005=\u0000\u0000\u0127P\u0001\u0000\u0000\u0000\u0128"+
-		"\u0129\u0005>\u0000\u0000\u0129R\u0001\u0000\u0000\u0000\u012a\u012b\u0005"+
-		"<\u0000\u0000\u012bT\u0001\u0000\u0000\u0000\u012c\u012d\u0005>\u0000"+
-		"\u0000\u012d\u012e\u0005=\u0000\u0000\u012eV\u0001\u0000\u0000\u0000\u012f"+
-		"\u0130\u0005<\u0000\u0000\u0130\u0131\u0005=\u0000\u0000\u0131X\u0001"+
-		"\u0000\u0000\u0000\u0132\u0133\u0007\u0000\u0000\u0000\u0133Z\u0001\u0000"+
-		"\u0000\u0000\u0134\u0135\u0007\u0001\u0000\u0000\u0135\\\u0001\u0000\u0000"+
-		"\u0000\u0136\u0138\u0007\u0002\u0000\u0000\u0137\u0136\u0001\u0000\u0000"+
-		"\u0000\u0138\u0139\u0001\u0000\u0000\u0000\u0139\u0137\u0001\u0000\u0000"+
-		"\u0000\u0139\u013a\u0001\u0000\u0000\u0000\u013a\u013b\u0001\u0000\u0000"+
-		"\u0000\u013b\u013c\u0006.\u0000\u0000\u013c^\u0001\u0000\u0000\u0000\u0003"+
-		"\u0000\u0105\u0139\u0001\u0006\u0000\u0000";
+		"\u0129\u0005>\u0000\u0000\u0129\u012a\u0005=\u0000\u0000\u012aR\u0001"+
+		"\u0000\u0000\u0000\u012b\u012c\u0005<\u0000\u0000\u012c\u012d\u0005=\u0000"+
+		"\u0000\u012dT\u0001\u0000\u0000\u0000\u012e\u012f\u0005>\u0000\u0000\u012f"+
+		"V\u0001\u0000\u0000\u0000\u0130\u0131\u0005<\u0000\u0000\u0131X\u0001"+
+		"\u0000\u0000\u0000\u0132\u0134\u0007\u0000\u0000\u0000\u0133\u0132\u0001"+
+		"\u0000\u0000\u0000\u0134\u0135\u0001\u0000\u0000\u0000\u0135\u0133\u0001"+
+		"\u0000\u0000\u0000\u0135\u0136\u0001\u0000\u0000\u0000\u0136\u0137\u0001"+
+		"\u0000\u0000\u0000\u0137\u0138\u0006,\u0000\u0000\u0138Z\u0001\u0000\u0000"+
+		"\u0000\u0139\u013d\u0007\u0001\u0000\u0000\u013a\u013c\u0007\u0002\u0000"+
+		"\u0000\u013b\u013a\u0001\u0000\u0000\u0000\u013c\u013f\u0001\u0000\u0000"+
+		"\u0000\u013d\u013b\u0001\u0000\u0000\u0000\u013d\u013e\u0001\u0000\u0000"+
+		"\u0000\u013e\\\u0001\u0000\u0000\u0000\u013f\u013d\u0001\u0000\u0000\u0000"+
+		"\u0140\u0142\u0007\u0003\u0000\u0000\u0141\u0140\u0001\u0000\u0000\u0000"+
+		"\u0142\u0143\u0001\u0000\u0000\u0000\u0143\u0141\u0001\u0000\u0000\u0000"+
+		"\u0143\u0144\u0001\u0000\u0000\u0000\u0144\u014b\u0001\u0000\u0000\u0000"+
+		"\u0145\u0147\u0005.\u0000\u0000\u0146\u0148\u0007\u0003\u0000\u0000\u0147"+
+		"\u0146\u0001\u0000\u0000\u0000\u0148\u0149\u0001\u0000\u0000\u0000\u0149"+
+		"\u0147\u0001\u0000\u0000\u0000\u0149\u014a\u0001\u0000\u0000\u0000\u014a"+
+		"\u014c\u0001\u0000\u0000\u0000\u014b\u0145\u0001\u0000\u0000\u0000\u014b"+
+		"\u014c\u0001\u0000\u0000\u0000\u014c^\u0001\u0000\u0000\u0000\u0007\u0000"+
+		"\u0105\u0135\u013d\u0143\u0149\u014b\u0001\u0006\u0000\u0000";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
