@@ -13,43 +13,49 @@ Si la entrada es correcta, muestra:
 La gramática está definida con ANTLR4 y el programa corre en Node.js.
 
 ## Instalación
-1. Clonar el repositorio desde GitHub: git clone https://github.com/valentinatoledo23/53522.git
-   
-2. Acceder a la carpeta del proyecto:
+**1. Abrir la terminal**
+Ubicarse en la carpeta raíz del proyecto clonado:
+
      cd 53522
    
-3. Verificar que Node.js esté instalado en el sistema.
-       Si no lo está, descargar e instalar la versión 18 o superior desde nodejs.org.
+**2. Ejecutar el analizador con un archivo de ejemplo**
+Usar el siguiente comando general:
 
-4. Instalar las dependencias necesarias para el proyecto:
-     npm install
+    node Proyecto/analizador.js ruta/del/archivo
    
-5. Instalar ANTLR4 de forma global (esto permite generar el parser desde la gramática):
-     npm install -g antlr4
+Reemplazar ruta/del/archivo por la ubicación del archivo .txt que se desea analizar.
 
-6. Generar el parser a partir del archivo de gramática:
-     antlr4 -Dlanguage=JavaScript Proyecto/gramatica.g4
+**Ejemplos concretos de ejecución**
 
-Este paso es obligatorio la primera vez. Si se modifica el archivo gramatica.g4, volver a ejecutar este comando.
+Si el archivo está dentro de la carpeta Proyecto/:
 
-## ¿Cómo ejecutar?
+      node Proyecto/analizador.js Proyecto/ejemplo_valido_1.txt
+      
+Si el archivo está en la raíz del repositorio:
 
-**Opción A:** Ejecutar el analizador en modo interactivo
-1. Ejecutar el archivo principal desde la terminal:
-      node Proyecto/analizador.js
+      node Proyecto/analizador.js ejemplo_valido_1.txt
 
-2. Escribir la definición del tablero línea por línea cuando el programa lo solicite.
+Si el archivo está en el escritorio (Windows):
 
-3. Finalizar la entrada presionando Ctrl + C o escribiendo la palabra FIN (según lo definido en el programa).
+      node Proyecto/analizador.js C:/Users/TuUsuario/Desktop/ejemplo_invalido_1.txt
 
-**Opción B:** Ejecutar el analizador pasando un archivo de texto
-1. Preparar un archivo de texto (extensión .txt) con la definición del tablero.
+Si el archivo está en el escritorio (Mac/Linux):
 
-2. Ejecutar el analizador indicando la ruta del archivo:
-     node Proyecto/analizador.js ruta/del/archivo.txt
+      node Proyecto/analizador.js /home/tuusuario/Desktop/ejemplo_invalido_1.txt
 
-Ejemplo concreto:
-   node Proyecto/analizador.js mi_tablero.txt
+**3. Interpretar la salida**
+- Si el ejemplo es válido:
+  El analizador mostrará en pantalla:
+   **-**Tabla de tokens reconocidos
+   **-**Árbol de análisis sintáctico
+   **-**Interpretación semántica del tablero
+   **-**Código JavaScript generado
+
+- Si el ejemplo es inválido:
+  El analizador mostrará un mensaje de error indicando:
+   **-**Tipo de error (léxico, sintáctico o semántico)
+   **-**Línea y columna donde ocurrió el error
+   **-**Breve descripción del problema
 
 ## Qué esperar al ejecutar
 Una vez ejecutado, el analizador mostrará en pantalla:
