@@ -13,7 +13,7 @@ Si la entrada es correcta, muestra:
 La gramática está definida con ANTLR4 y el programa corre en Node.js.
 
 ## Instalación
-Clona este repositorio: https://github.com/valentinatoledo23/53522.git
+Clona este repositorio: git clone https://github.com/valentinatoledo23/53522.git
 
 ## Cómo ejecutar
 **1. Abrir la terminal**
