@@ -35,34 +35,30 @@ Este paso es obligatorio la primera vez. Si se modifica el archivo gramatica.g4,
 ## ¿Cómo ejecutar?
 
 Opción A: Ejecutar el analizador en modo interactivo
-Ejecutar el archivo principal desde la terminal:
+1. Ejecutar el archivo principal desde la terminal:
+      node Proyecto/analizador.js
 
-bash
-node Proyecto/analizador.js
-Escribir la definición del tablero línea por línea cuando el programa lo solicite.
+2. Escribir la definición del tablero línea por línea cuando el programa lo solicite.
 
-Finalizar la entrada presionando Ctrl + C o escribiendo la palabra FIN (según lo definido en el programa).
+3. Finalizar la entrada presionando Ctrl + C o escribiendo la palabra FIN (según lo definido en el programa).
 
 Opción B: Ejecutar el analizador pasando un archivo de texto
-Preparar un archivo de texto (extensión .txt) con la definición del tablero.
+1. Preparar un archivo de texto (extensión .txt) con la definición del tablero.
 
-Ejecutar el analizador indicando la ruta del archivo:
+2. Ejecutar el analizador indicando la ruta del archivo:
+     node Proyecto/analizador.js ruta/del/archivo.txt
 
-bash
-node Proyecto/analizador.js ruta/del/archivo.txt
 Ejemplo concreto:
-
-bash
-node Proyecto/analizador.js mi_tablero.txt
+   node Proyecto/analizador.js mi_tablero.txt
 
 ## Qué esperar al ejecutar
 Una vez ejecutado, el analizador mostrará en pantalla:
 
-Una tabla con los tokens reconocidos (análisis léxico)
+- Una tabla con los tokens reconocidos (análisis léxico)
 
-El árbol de análisis sintáctico (estructura del tablero)
+- El árbol de análisis sintáctico (estructura del tablero)
 
-Una interpretación del tablero (fuentes, métricas, gráficos, filtros, alertas)
+- Una interpretación del tablero (fuentes, métricas, gráficos, filtros, alertas)
 
-El código JavaScript generado a partir de la definición
+- El código JavaScript generado a partir de la definición
 
