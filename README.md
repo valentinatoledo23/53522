@@ -34,7 +34,7 @@ Este paso es obligatorio la primera vez. Si se modifica el archivo gramatica.g4,
 
 ## ¿Cómo ejecutar?
 
-Opción A: Ejecutar el analizador en modo interactivo
+**Opción A:** Ejecutar el analizador en modo interactivo
 1. Ejecutar el archivo principal desde la terminal:
       node Proyecto/analizador.js
 
@@ -42,7 +42,7 @@ Opción A: Ejecutar el analizador en modo interactivo
 
 3. Finalizar la entrada presionando Ctrl + C o escribiendo la palabra FIN (según lo definido en el programa).
 
-Opción B: Ejecutar el analizador pasando un archivo de texto
+**Opción B:** Ejecutar el analizador pasando un archivo de texto
 1. Preparar un archivo de texto (extensión .txt) con la definición del tablero.
 
 2. Ejecutar el analizador indicando la ruta del archivo:
