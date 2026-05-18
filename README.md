@@ -46,16 +46,16 @@ Si el archivo está en el escritorio (Mac/Linux):
 **3. Interpretar la salida**
 - Si el ejemplo es válido:
   El analizador mostrará en pantalla:
-   **-**Tabla de tokens reconocidos
-   **-**Árbol de análisis sintáctico
-   **-**Interpretación semántica del tablero
-   **-**Código JavaScript generado
+   **-** Tabla de tokens reconocidos
+   **-** Árbol de análisis sintáctico
+   **-** Interpretación semántica del tablero
+   **-** Código JavaScript generado
 
 - Si el ejemplo es inválido:
   El analizador mostrará un mensaje de error indicando:
-   **-**Tipo de error (léxico, sintáctico o semántico)
-   **-**Línea y columna donde ocurrió el error
-   **-**Breve descripción del problema
+   **-** Tipo de error (léxico, sintáctico o semántico)
+   **-** Línea y columna donde ocurrió el error
+   **-** Breve descripción del problema
 
 ## Qué esperar al ejecutar
 Una vez ejecutado, el analizador mostrará en pantalla:
