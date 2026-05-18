@@ -1,0 +1,6 @@
+tablero AnalisisClientes
+fuente Clientes (archivo "clientes.csv")
+metrica promedio_edad edad_promedio
+grafico barras mostrando promedio_edad por ciudad
+
+//La definición de métrica necesita el formato nombre = expresion. Falta el =
