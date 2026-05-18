@@ -1,0 +1,5 @@
+tablero MonitoreoStock
+fuente Inventario (archivo "stock.json")
+metrica productos_bajos = contar(si stock < 10)
+filtro categoria = "electronica"
+alerta si productos_bajos > 5 entonces enviar mail a logistica@empresa.com
