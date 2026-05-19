@@ -20,15 +20,15 @@ Clona este repositorio: git clone https://github.com/valentinatoledo23/53522.git
 
 **2.** Ubicarse en la raíz del proyecto 
 
-       cd Proyecto
+       PS C:\Users\USUARIO\53522> cd Proyecto
 
 **3.** Ejecutar el analizador
 
-     node index.js
+      PS C:\Users\USUARIO\53522\Proyecto> node index.js
 
 **4.** Ejecutar con un archivo específico
 
-     node index.js nombre_archivo.txt
+     PS C:\Users\USUARIO\53522\Proyecto> node index.js nombre_archivo.txt
 
 **5.** Depurar y ver el árbol sintáctico
 
