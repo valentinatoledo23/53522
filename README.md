@@ -16,49 +16,23 @@ La gramática está definida con ANTLR4 y el programa corre en Node.js.
 Clona este repositorio: git clone https://github.com/valentinatoledo23/53522.git
 
 ## Cómo ejecutar
-**1. Abrir la terminal**
-Ubicarse en la carpeta raíz del proyecto clonado:
+**1.** Abrir la terminal integrada (Ctrl + ñ)
 
-     cd 53522
-   
-**2. Ejecutar el analizador con un archivo de ejemplo**
-Usar el siguiente comando general:
+**2.** Ubicarse en la raíz del proyecto 
 
-    node Proyecto/analizador.js ruta/del/archivo
-   
-Reemplazar ruta/del/archivo por la ubicación del archivo .txt que se desea analizar.
+       cd Proyecto
 
-**Ejemplos concretos de ejecución**
+**3.** Ejecutar el analizador
 
-Si el archivo está dentro de la carpeta Proyecto/:
+     node index.js
 
-      node Proyecto/analizador.js Proyecto/ejemplo_valido_1.txt
-      
-Si el archivo está en la raíz del repositorio:
+**4.** Ejecutar con un archivo específico
 
-      node Proyecto/analizador.js ejemplo_valido_1.txt
+     node index.js nombre_archivo.txt
 
-Si el archivo está en el escritorio (Windows):
+**5.** Depurar y ver el árbol sintáctico
 
-      node Proyecto/analizador.js C:/Users/TuUsuario/Desktop/ejemplo_invalido_1.txt
-
-Si el archivo está en el escritorio (Mac/Linux):
-
-      node Proyecto/analizador.js /home/tuusuario/Desktop/ejemplo_invalido_1.txt
-
-**3. Interpretar la salida**
-- Si el ejemplo es válido:
-  El analizador mostrará en pantalla:
-   **-** Tabla de tokens reconocidos
-   **-** Árbol de análisis sintáctico
-   **-** Interpretación semántica del tablero
-   **-** Código JavaScript generado
-
-- Si el ejemplo es inválido:
-  El analizador mostrará un mensaje de error indicando:
-   **-** Tipo de error (léxico, sintáctico o semántico)
-   **-** Línea y columna donde ocurrió el error
-   **-** Breve descripción del problema
+     F5
 
 ## Qué esperar al ejecutar
 Una vez ejecutado, el analizador mostrará en pantalla:
