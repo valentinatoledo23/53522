@@ -1,5 +1,4 @@
-VentasMensuales
-fuente Ventas (archivo "ventas.csv")
-metrica total = suma(monto)
+tablero Ventas2025
+  fuente ventas tipo csv ruta "ventas.csv";
 
 // Motivo: Toda definición debe empezar con la palabra reservada tablero

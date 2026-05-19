@@ -7,12 +7,19 @@ import fs from 'fs';
 
 async function main() {
     let input;
+    let inputFilename = process.argv[2];
 
-    try {
-        input = fs.readFileSync('input.txt', 'utf8');
-    } catch (err) {
+    if (inputFilename) {
+        try {
+            input = fs.readFileSync(inputFilename, 'utf8');
+            console.log(`📂 Leyendo archivo: ${inputFilename}\n`);
+        } catch (err) {
+            console.error(`❌ Error: No se pudo leer el archivo "${inputFilename}"`);
+            console.error(`   ${err.message}`);
+            process.exit(1);
+        }
+    } else {
         input = await leerCadena();
-        console.log(input);
     }
 
     let inputStream = CharStreams.fromString(input);
@@ -40,11 +47,25 @@ async function main() {
     console.log("└─────────────────────────┴──────────────────────────────────┘");
     
     let parser = new tableroParser(tokenStream);
+    
+    // ========== MANEJADOR DE ERRORES DETALLADOS ==========
+    parser.removeErrorListeners();
+    parser.addErrorListener({
+        syntaxError: (recognizer, offendingSymbol, line, column, msg, err) => {
+            console.error(`\n❌ ERROR DE SINTAXIS en línea ${line}:${column}`);
+            console.error(`   ${msg}`);
+            if (offendingSymbol && offendingSymbol.text) {
+                console.error(`   Token problemático: "${offendingSymbol.text}"`);
+            }
+        }
+    });
+    // =====================================================
+    
     let tree = parser.programa();
 
     if (parser.syntaxErrorsCount > 0) {
-        console.error("\n❌ Se encontraron errores de sintaxis en la entrada.");
-        console.error(`   Cantidad de errores: ${parser.syntaxErrorsCount}`);
+        console.error(`\n❌ Se encontraron ${parser.syntaxErrorsCount} error(es) de sintaxis.`);
+        console.error(`   El análisis se detuvo. Corregí los errores y volvé a ejecutar.\n`);
     } else {
         console.log("\n✅ Entrada válida.\n");
         
